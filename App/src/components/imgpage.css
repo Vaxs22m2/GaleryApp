@@ -120,11 +120,9 @@
 }
 
 .main-image {
-  width: 100%;
-  max-width: 624px;
-  height: auto;
-  border-radius: 1px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+width: 654px;
+height: auto;
+display: block;
 }
 
 /* Responsive design */
@@ -150,7 +148,7 @@
     padding: 12px;
   }
     .favorites a .text {
-    display: none; /* скрываем текст, оставляем иконки */
+    display: none;
   }
 
   .back-link {

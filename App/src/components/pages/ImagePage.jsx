@@ -94,7 +94,6 @@ const ImagePage = () => {
                 src={image.urls.regular}
                 alt={image.alt_description}
                 className="main-image"
-                style={{ width: '744px', display: 'block', margin: '0 auto' }}
               />
             </div>
           </div>
