@@ -1,0 +1,134 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    padding: 25px 120px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.favorites a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-Mainsection {
+    background-color: #C4C4C4;
+    height: 270px;
+    width: 100%;
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 253px;
+    background: url('./assets/88869b670b5126bddfc82e66c661d6c2fd217bd4.jpg') center/cover no-repeat;
+    padding: 0 16px;
+}
+
+.search-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    max-width: 866px;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 300;
+    flex-grow: 1;
+    padding: 8px 12px;
+}
+
+.image-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 40px 16px;
+}
+
+.image-card {
+    width: 100%;
+    max-width: 473px;
+    height: 440px;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-card:hover {
+    transform: scale(1.02);
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    header {
+        padding: 9px;
+  
+    }
+
+    .search-container {
+        height: 60px;
+    }
+
+    .search-container input {
+        font-size: 18px;
+    }
+
+    .image-card {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-container {
+
+        height: auto;
+        padding: 12px;
+    }
+
+    .search-container input {
+        width: 40%;
+        font-size: 16px;
+    }
+
+    .search-section {
+        height: auto;
+        padding: 24px 12px;
+    }
+
+    .search-Mainsection {
+        height: auto;
+    }
+
+    .image-results {
+        padding: 20px 12px;
+    }
+}
