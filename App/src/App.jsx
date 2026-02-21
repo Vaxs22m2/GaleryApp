@@ -32,11 +32,11 @@ function App() {
         setError('')
       } else {
         setImages([])
-        setError('Изображение не найдено!')
+        setError('Image not found!')
       }
     } catch (err) {
-      console.error('Ошибка загрузки:', err)
-      setError('Ошибка при загрузке данных')
+      console.error('Loading error:', err)
+      setError('Error loading data')
       setImages([])
     } finally {
       setLoading(false)
@@ -59,7 +59,7 @@ function App() {
           <img src={img} alt="Logo" />
         </div>
         <div className="favorites">
-      <Link to="/favorites"><i className="bi bi-heart"></i> Избранное</Link>
+      <Link to="/favorites"><i className="bi bi-heart"></i> Favorites</Link>
         </div>
       </header>
 
@@ -68,7 +68,7 @@ function App() {
           <div className="search-container">
             <input
               type="search"
-              placeholder="Поиск"
+              placeholder="Search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
@@ -79,7 +79,7 @@ function App() {
       </div>
 
       <div className="image-results">
-        {loading && <p>Загрузка...</p>}
+        {loading && <p>Loading...</p>}
 
         {!loading && error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
 
@@ -87,7 +87,7 @@ function App() {
           images.map((img) => (
             <div key={img.id} className="image-card">
               <Link to={`/image/${img.id}`}>
-                <img src={img.urls.small} alt={img.alt_description || 'Изображение'} />
+                <img src={img.urls.small} alt={img.alt_description || 'Image'} />
               </Link>
             </div>
           ))

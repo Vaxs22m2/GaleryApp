@@ -23,10 +23,10 @@ const ImagePage = () => {
         if (data && data.id) {
           setImage(data)
         } else {
-          setError('Изображение не найдено.')
+          setError('Image not found.')
         }
       } catch (err) {
-        setError('Ошибка загрузки.')
+        setError('Loading error.')
       } finally {
         setLoading(false)
       }
@@ -40,13 +40,13 @@ const ImagePage = () => {
     if (!favs.find((fav) => fav.id === image.id)) {
       favs.push(image)
       localStorage.setItem('favorites', JSON.stringify(favs))
-      alert('Добавлено в избранное!')
+      alert('Added to favorites!')
     } else {
-      alert('Уже в избранном')
+      alert('Already in favorites')
     }
   }
 
-  if (loading) return <p>Загрузка...</p>
+  if (loading) return <p>Loading...</p>
   if (error) return <p style={{ color: 'red' }}>{error}</p>
 
   return (
@@ -54,8 +54,8 @@ const ImagePage = () => {
       <header>
         <img className='logo' src={img} alt="Logo" />
      <div className="favorites">
-  <Link to="/"><i className="bi bi-search"></i> <span className="text">Поиск</span></Link>
-  <Link to="/favorites"><i className="bi bi-heart"></i> <span className="text">Избранное</span></Link>
+  <Link to="/"><i className="bi bi-search"></i> <span className="text">Search</span></Link>
+  <Link to="/favorites"><i className="bi bi-heart"></i> <span className="text">Favorites</span></Link>
 </div>
 
       </header>

@@ -150,7 +150,7 @@
     padding: 12px;
   }
     .favorites a .text {
-    display: none; /* скрываем текст, оставляем иконки */
+    display: none; /* hide text, keep icons */
   }
 
   .back-link {

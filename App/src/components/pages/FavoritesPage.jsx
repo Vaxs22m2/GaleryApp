@@ -14,7 +14,7 @@ const FavoritesPage = () => {
   if (favorites.length === 0) return (
     <div style={{ padding: '20px' }}>
 
-      <h2>Избранное пусто</h2>
+      <h2>Favorites is empty</h2>
     </div>
   )
 
@@ -23,12 +23,12 @@ const FavoritesPage = () => {
       <header>
         <img className='logo' src={img} alt="Logo" />
            <div className="favorites">
-  <Link to="/"><i className="bi bi-search"></i> <span className="text">Поиск</span></Link>
-  <Link to="/favorites"><i className="bi bi-heart"></i> <span className="text">Избранное</span></Link>
+  <Link to="/"><i className="bi bi-search"></i> <span className="text">Search</span></Link>
+  <Link to="/favorites"><i className="bi bi-heart"></i> <span className="text">Favorites</span></Link>
 </div>
       </header>
 
-      <h2 style={{ textAlign: 'center' }}>Избранное</h2>
+      <h2 style={{ textAlign: 'center' }}>Favorites</h2>
 
       
       <div className="image-results">
